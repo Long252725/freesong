@@ -1,0 +1,301 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 630px;
+    display: flex;
+    justify-content: center;
+    background-color: #243342;
+    overflow: hidden;
+    transition: all 0.2s;
+    align-content: center;
+}
+.container {
+    width: 380px;
+    position: absolute;
+    /* top: 0; */
+    height: 630px;
+    background-color: #0f141a;
+    box-shadow: 0 0 10px #0f141a;
+    
+}
+.header {
+    position: relative;
+    width: 380px;
+    height: 360px;
+    background-color: #151d26;
+    background-position: center;
+    fill: #8c8d94;
+    border-radius: 0 0 50px 50px;
+    z-index: 1;
+    top: 0;
+}
+/* Menu */
+.menu {
+    position: absolute;
+    width: 90%;
+    height: 50px;
+    background-color: #243342;
+    box-shadow: 0 0 10px #0f141a;
+    bottom: 10px;
+    left: 20px;
+    border-radius: 30px;
+    z-index: 2;
+
+}
+.play {
+    background-color: #ff2152;
+    width: 50px;
+    height: 50px;
+    left: 150px;
+    position: relative;
+    border-radius: 100%;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.playing {
+    
+}
+.play:hover {
+    opacity: 0.9;
+}
+
+.prev {
+    left: 70px;
+    bottom: 0px;
+    cursor: pointer;
+    
+
+}
+.next {
+    left: 230px;
+    bottom: 0px;
+    cursor: pointer;
+}
+.shuffle {
+    left: 10px;
+    cursor: pointer;
+
+}
+.repeat {
+    right: 10px;
+    cursor: pointer;
+}
+.repeat, .shuffle, .next, .prev {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    /* background-color: red; */
+    border-radius: 100%;
+
+}
+.shuffleicon {
+    margin: 15px 0px 11px 15px;
+    color: #fff;
+    font-size: 20px;
+}
+.shuffleicon.active {
+    color: #ff5c80 ;
+}
+.repeaticon {
+    margin: 15px 0px 11px 15px;
+    color: #fff;
+    font-size: 20px;
+}
+.repeaticon.active {
+    color: #ff5c80 ;
+}
+.previcon {
+    margin-left: 4px;
+}
+.icon {
+    margin: 11px 10px 10px 17px;
+    color: #fff;
+    font-size: 27px;
+}
+/* Thanh song */
+input {
+    -webkit-appearance: none;
+    position: absolute;
+    appearance: none;
+    bottom: 75px;
+    width: 80%;
+    left: 40px;
+    height: 7px;
+    border-radius: 10px;
+}
+.slider::-webkit-slider-thumb {
+    background: #ff2152;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+/* cd */
+.cd {
+    width: 60%;
+    height: 210px;
+    background: url(https://i1.sndcdn.com/artworks-4VN4srK9aaTVEOlz-97l08A-t500x500.jpg);
+    background-size: cover;
+    margin: 10px 0 0 80px;
+    border-radius: 5px;
+    position: absolute;
+    padding-bottom: 10px;
+
+
+}
+/* .line {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    top: 70px;
+    background: #fff;
+    padding-top: 0px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+
+    box-shadow: 0 0 10px;
+}
+.line-1 {
+    animation: line1 0.5s infinite linear backwards;
+}
+.line-2 {
+    animation: line2 2s infinite linear;
+}
+.line-3 {
+    animation: line3 2s infinite linear;
+}
+.line-4 {
+    animation: line4 2s infinite linear;
+}
+.line-5 {
+    animation: line5 2s infinite linear;
+}
+.line-6 {
+    animation: line6 2s infinite linear;
+}
+.line-7 {
+    animation: line7 2s infinite linear;
+}
+@keyframes lin1 {
+    to {
+        padding: 100px 0 100px 0;
+    }
+} */
+/* name song */
+.name-song-box {
+    width: 100%;
+    height: 35px;
+    /* background-color: blue; */
+    position: absolute;
+    bottom: 90px;
+    display: flex;
+    justify-content: center;
+}
+.name-song {
+    padding: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    /* background-color: red; */
+}
+/* list song */
+.main {
+    width: 100%;
+    height: 265px;
+    background-color: #151d26;
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+    border-radius: 40px 40px 0 0 ;
+    display: flex;
+    flex-direction: column;
+    overflow-y:scroll;
+    overflow-x: hidden;
+
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #243342;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #0f141a;
+    border-radius: 10px;
+}
+.song {
+    width: 97%;
+    height: 60px;
+    background-color: #243342;
+    border-radius: 40px;
+    margin: 3px 6px;
+    box-shadow: 0 0 10px #0f141a;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    position: relative;
+    cursor: pointer;
+}
+
+.song:hover {
+    transform: scale(0.98);
+}
+.song-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 4px 5px;
+}
+.song.active {
+    border-right: 4px solid #ff1157;
+}
+.bar {
+    width: 23px;
+    height: 25px;
+    position: absolute;
+    right: 7%;
+    /* background-color: red; */
+    top: 18px;
+    cursor: pointer;
+}
+.bar-icon {
+    color: white;
+    font-size: 25px;
+}
+.name-songs {
+    color: white;
+    position: absolute;
+    left: 17%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    top: 19px;
+}
+/* responsive */ 
+@media only screen and (min-width: 370px) and (max-width:1280px) {
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+    .header {
+        width: 100%;
+        height: 59%;
+    }
+    .main {
+        height: 40%;
+    }
+    .cd {
+        position: absolute;
+        bottom: 140px;
+        height: 55%;
+    }
+    .song {
+        width: 95%;
+        margin: 3px 14px;
+    }
+}
